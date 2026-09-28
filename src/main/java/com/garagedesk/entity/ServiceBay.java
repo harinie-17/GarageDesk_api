@@ -1,0 +1,3 @@
+package com.garagedesk.entity;
+import jakarta.persistence.*; import jakarta.validation.constraints.NotBlank;
+@Entity @Table(name="service_bays") public class ServiceBay { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) Long id; @NotBlank @Column(nullable=false,unique=true) String bayNumber; @NotBlank String bayType; boolean active=true; public ServiceBay(){} public ServiceBay(String n,String t,boolean a){bayNumber=n;bayType=t;active=a;} public Long getId(){return id;} public String getBayNumber(){return bayNumber;} public void setBayNumber(String v){bayNumber=v;} public String getBayType(){return bayType;} public void setBayType(String v){bayType=v;} public boolean isActive(){return active;} public void setActive(boolean v){active=v;} }

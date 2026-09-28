@@ -1,0 +1,3 @@
+package com.garagedesk.entity;
+import jakarta.persistence.*; import jakarta.validation.constraints.NotBlank;
+@Entity @Table(name="mechanics") public class Mechanic { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) Long id; @NotBlank String name; @NotBlank String specialization; boolean available=true; public Mechanic(){} public Mechanic(String n,String s,boolean a){name=n;specialization=s;available=a;} public Long getId(){return id;} public String getName(){return name;} public void setName(String v){name=v;} public String getSpecialization(){return specialization;} public void setSpecialization(String v){specialization=v;} public boolean isAvailable(){return available;} public void setAvailable(boolean v){available=v;} }

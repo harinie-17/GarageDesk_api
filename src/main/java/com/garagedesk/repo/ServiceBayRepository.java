@@ -1,0 +1,1 @@
+package com.garagedesk.repo; import com.garagedesk.entity.ServiceBay; import org.springframework.data.jpa.repository.JpaRepository; public interface ServiceBayRepository extends JpaRepository<ServiceBay,Long>{}
